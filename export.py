@@ -31,6 +31,10 @@ def export_get_genres():
     with open(export_file, "a+") as f:
         f.write("\n" + str(get_genres(filename)))
 
+def export_when_was_top_sold_fps():
+    with open(export_file, "a+") as f:
+        f.write('\n' + str(when_was_top_sold_fps(filename)))
+
 def main():
     if user_input == "1":
         export_count_games()#működik :)
@@ -46,4 +50,6 @@ def main():
         export_sort_abc()
     elif user_input == "7":
         export_get_genres()
+    elif user_input == "8":
+        export_when_was_top_sold_fps()
 main()
